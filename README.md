@@ -1,9 +1,9 @@
 # Matizepeda
 
-This repository contains a simple happiness tracker. The `happiness_tracker.py`
-script lets you record your happiness each day on a scale of 0–10.
+This repository contains a simple happiness tracker. You can log your daily
+happiness either from the command line or via a small web page.
 
-## Usage
+## Command-line usage
 
 Run the script with Python and follow the prompt:
 
@@ -12,4 +12,10 @@ python happiness_tracker.py
 ```
 
 Your responses are saved in `happiness_log.csv`. The script will also display
-the average happiness across all saved entries.
+your average happiness across all saved entries.
+
+## Web interface
+
+Open `index.html` in your browser (or deploy the repository with any static
+site host). The page lets you record a score between 0 and 10 in local storage
+and shows the average score for all entries saved in the browser.
