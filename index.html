@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happiness Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Daily Happiness Tracker</h1>
-    <p>Enter your happiness score for today (0-10):</p>
-    <input type="number" id="score" min="0" max="10" step="1">
-    <button id="submit">Submit</button>
-    <h2>Average happiness: <span id="average">0</span></h2>
-    <ul id="log"></ul>
+    <header>
+        <h1>Happiness Tracker</h1>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    <main>
+        <section id="input-section">
+            <label for="score">Score (0-10)</label>
+            <input type="number" id="score" min="0" max="10" step="1">
+            <button id="submit">Submit</button>
+            <button id="clear">Clear log</button>
+            <button id="export">Export CSV</button>
+        </section>
+        <section id="stats-section">
+            <h2>Average happiness: <span id="average">0</span></h2>
+            <canvas id="chart" height="200"></canvas>
+            <ul id="log"></ul>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
